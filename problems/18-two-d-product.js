@@ -27,7 +27,14 @@ console.log(twoDimensionalProduct(arr2)); // 88
 
 let twoDimensionalProduct = function(arr) {
     // Your code here
+
+    let flatArray = arr.flat();
+
+    return flatArray.reduce(function(accum, current) {
+      return accum *= current;
+    }, 1);
 };
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
